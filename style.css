@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section1{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+#timer h1{
+    display: inline;
+}
+
+table{
+    border: 2px solid black;
+    padding: 0;
+}
+
+td{
+    border: none;
+}
+
+table img{
+    border: none;
+}
+#status{
+    display: inline;
+}
