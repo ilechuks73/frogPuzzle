@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+            body{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: darkgreen;
+            }
+            .section1{
+                width: 100vw;
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 30px;
+            }
+            #timer h1{
+                display: inline;
+            }
+
+            table{
+                border: 2px solid black;
+                padding: 0;
+            }
+
+            td{
+                border: none;
+            }
+
+            table img{
+                border: none;
+            }
+            #status{
+                display: inline;
+            }
+        </style>
+	</head>
+	<body>
+        <div class="section1">
+            <span id="timer"><h1>0</h1> second(s)</span>
+            <button id="restartbutton" onclick = "restartGame()">RESTART GAME</button>
+        </div>
+        <span>STATUS: <div id="status"> GAME ON! </div></span>
+		<table border="border">
+			<tr>
+				<td><img id="square0" width="50" height="50" src="images/yellowFrog.gif" onclick="clickSquare(0);" /></td>
+				<td><img id="square1" width="50" height="50" src="images/yellowFrog.gif" onclick="clickSquare(1);" /></td>
+				<td><img id="square2" width="50" height="50" src="images/yellowFrog.gif" onclick="clickSquare(2);" /></td>
+				<td><img id="square3" width="50" height="50" src="images/empty.gif" onclick="clickSquare(3);" /></td>
+				<td><img id="square4" width="50" height="50" src="images/greenFrog.gif" onclick="clickSquare(4);" /></td>
+				<td><img id="square5" width="50" height="50" src="images/greenFrog.gif" onclick="clickSquare(5);" /></td>
+				<td><img id="square6" width="50" height="50" src="images/greenFrog.gif" onclick="clickSquare(6);" /></td>
+			</tr>
+		</table>
+        
+		<script>
+		var green = "images/greenFrog.gif"
+		var yellow = "images/yellowFrog.gif";
+		var stat = document.getElementById('status')
+        
+		var img = document.getElementsByTagName('img');
+		var imgs = Array.from(img);
+		var empty = null;
+		var t = 0
+		var time = document.getElementById('timer')
+		
+		var timer = setInterval(function timer (){
+		    t++
+		time.innerHTML = '<h1>' + t + '</h1>' + ' second(s)'
+		} , 1000)
+		  
+		function clickSquare(i){
+
+			var clickedSquare =document.getElementById('square'+i)
+			var getsrc = clickedSquare.getAttribute('src')
+			
+			if(getsrc == green){  var j= -1; 
+			       var k= -2; 
+			     console.log('no errors')
+			}
+			if(getsrc == yellow){  var j= 1; 
+			       var k= 2; 
+			     console.log('no err')
+			}
+			if(i > 4 && getsrc == yellow){
+				k = 1
+				console.log('k is now 1')
+			}
+			if(i < 2 && getsrc == green){
+				k = 1
+				console.log('k is now 1')
+			}
+			var s1 =document.getElementById('square'+(i+j))
+			var getsrc1 = s1.getAttribute('src')
+			var s2 = document.getElementById('square'+(i+k))
+			var getsrc2 = s2.getAttribute('src');
+			
+      console.log(clickedSquare)
+			console.log(getsrc)
+			console.log(s1)
+			console.log(s2)
+			if (getsrc1 != "images/empty.gif" && getsrc2 != "images/empty.gif" ){
+            alert('WRONG MOVE!')
+            return false}
+			if(true){isEmpty(s1,s2,getsrc,getsrc1, getsrc2)}
+			clickedSquare.setAttribute('src', "images/empty.gif" )
+            
+					
+			isWon()
+
+		}
+
+		function move(getsrc){
+		  empty.setAttribute('src', getsrc)
+		  console.log('moving')
+		  
+		}
+
+		function isEmpty(s1,s2,getsrc,getsrc1, getsrc2){
+      if (getsrc1 == "images/empty.gif" ){
+        empty = s1
+      }
+      if (getsrc2 == "images/empty.gif" ){
+        empty = s2
+      }
+      
+      
+      if(true){ move(getsrc) }
+      
+		}
+		
+		function isWon(){
+		if(
+		  imgs[0].getAttribute('src') == green &&
+		  imgs[1].getAttribute('src') == green &&
+		  imgs[2].getAttribute('src') == green &&
+		  imgs[3].getAttribute('src') == 
+		"images/empty.gif"
+		){
+		  alert('you win')
+        stat.innerHTML = "YOU WIN!" 
+		  clearInterval(timer)
+		}
+		}
+
+        function restartGame(){
+            window.location.reload()
+        }
+
+		</script>
+	</body>
+</html>
