@@ -5,15 +5,36 @@
     box-sizing: border-box;
     border: none
 }
-
+button:hover{
+    background-color: none;
+}
 body{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: relative;
 }
 .section1{
+    width: 85%;
+    margin: 50px auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.section1 div span{
+    margin-top: 20px;
+    display: block;
+}
+
+.buttonGroup{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    background-color:#6bc43c;
 }
 
 #timer h1{
@@ -21,7 +42,8 @@ body{
 }
 
 table{
-    width: 70%;
+    width: 300px;
+    margin: 100px auto;
 }
 
 td{
@@ -38,18 +60,27 @@ td img{
 }
 
 .HTP{
-    background-color: rgba(187, 255, 0, 0.508);
+    background-color: #ffff33;
     width: 70%;
     height: min-content;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
+    pointer-events: none;
+    line-height: 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.HTP button{
+    float: right;
 }
 
 .show{
     opacity: 1;
+    pointer-events: all;
 }
 
 .lilyPad{

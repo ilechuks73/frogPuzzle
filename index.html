@@ -9,75 +9,89 @@
 
 <body>
 	<div class="section1">
-
-		<span id="timer">
-			<h1>0</h1> second(s)
-		</span>
-
-		<button class="" id="HTPbutton" onclick="showHTP(event)">HOW TO PLAY</button>
-
-		<button id="startbutton" onclick="pauseGame()">PAUSE GAME</button>
-
-		<button id="restartbutton" onclick="restartGame()">RESTART GAME</button>
-
-	</div>
+		<div>
+			<span id="timer">
+				<h1>0</h1> second(s)
+			</span>
 
 
-	<span>STATUS: <div id="status"> GAME ON! </div></span>
+			<span><h1>STATUS: <div id="status"> GAME ON! </div></h1></span> 
+		</div>
+
+		<div class="buttonGroup">
+			<button class="" id="HTPbutton" onclick="showHTP(event)">HOW TO PLAY</button>
+
+			<button id="startbutton" onclick="pauseGame()">PAUSE GAME</button>
+
+			<button id="restartbutton" onclick="restartGame()">RESTART GAME</button>
+		</div>
+		</div>
 
 
-	<table border="border">
 
-		<tr>
-			<td><img id="square0" width="50" height="50" src="images/yellowFrog.gif" onclick="clickSquare(0);" draggable="false" /></td>
 
-			<td><img id="square1" width="50" height="50" src="images/yellowFrog.gif" onclick="clickSquare(1);" draggable="false" /></td>
 
-			<td><img id="square2" width="50" height="50" src="images/yellowFrog.gif" onclick="clickSquare(2);" draggable="false" /></td>
+		<table border="border">
 
-			<td><img id="square3" width="50" height="50" src="images/empty.gif" onclick="clickSquare(3);" draggable="false" /></td>
+			<tr>
+				<td><img id="square0" width="50" height="50" src="images/yellowFrog.gif" onclick="clickSquare(0);"
+						draggable="false" /></td>
 
-			<td><img id="square4" width="50" height="50" src="images/greenFrog.gif" onclick="clickSquare(4);" draggable="false" /></td>
+				<td><img id="square1" width="50" height="50" src="images/yellowFrog.gif" onclick="clickSquare(1);"
+						draggable="false" /></td>
 
-			<td><img id="square5" width="50" height="50" src="images/greenFrog.gif" onclick="clickSquare(5);" draggable="false" /></td>
+				<td><img id="square2" width="50" height="50" src="images/yellowFrog.gif" onclick="clickSquare(2);"
+						draggable="false" /></td>
 
-			<td><img id="square6" width="50" height="50" src="images/greenFrog.gif" onclick="clickSquare(6);" draggable="false" /></td>
+				<td><img id="square3" width="50" height="50" src="images/empty.gif" onclick="clickSquare(3);"
+						draggable="false" /></td>
 
-		</tr>
+				<td><img id="square4" width="50" height="50" src="images/greenFrog.gif" onclick="clickSquare(4);"
+						draggable="false" /></td>
 
-		<tr>
+				<td><img id="square5" width="50" height="50" src="images/greenFrog.gif" onclick="clickSquare(5);"
+						draggable="false" /></td>
 
-			<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
-			<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
-			<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
-			<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
-			<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
-			<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
-			<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
+				<td><img id="square6" width="50" height="50" src="images/greenFrog.gif" onclick="clickSquare(6);"
+						draggable="false" /></td>
 
-		</tr>
+			</tr>
 
-	</table>
+			<tr>
 
-	<div class="HTP" id="HTP">
-		<h3>Welcome to the FROGGY world</h3>
+				<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
+				<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
+				<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
+				<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
+				<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
+				<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
+				<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
 
-		<p>Here are the rules</p>
+			</tr>
 
-		<ul>
-			<li>A froggy can only jump to the empty lily pad in front of it or jump above a froggy friend to the empty
-				lily pad</li>
+		</table>
 
-			<li>A froggy cannot jump over more than froggy friend</li>
+		<div class="HTP" id="HTP">
+			<button class="" id="HTPbutton" onclick="showHTP(event)">x</button>
+			<h3>Welcome to the FROGGY world</h3>
 
-			<li>When you get all the green froggy friends to the left and all the yellow froggy friends to the right
-				then you win</li>
+			<p>Here are the rules</p>
 
-		</ul>
+			<ul>
+				<li>A froggy can only jump to the empty lily pad in front of it or jump above a froggy friend to the
+					empty
+					lily pad</li>
 
-	</div>
+				<li>A froggy cannot jump over more than froggy friend</li>
 
-	<script src="script.js"></script>
+				<li>When you get all the green froggy friends to the left and all the yellow froggy friends to the right
+					then you win</li>
+
+			</ul>
+
+		</div>
+
+		<script src="script.js"></script>
 </body>
 
 </html>
