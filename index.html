@@ -1,28 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-        <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-        <div class="section1">
-            <span id="timer"><h1>0</h1> second(s)</span>
-            <button id="restartbutton" onclick = "restartGame()">RESTART GAME</button>
-        </div>
-        <span>STATUS: <div id="status"> GAME ON! </div></span>
-		<table border="border">
-			<tr>
-				<td><img id="square0" width="50" height="50" src="images/yellowFrog.gif" onclick="clickSquare(0);" /></td>
-				<td><img id="square1" width="50" height="50" src="images/yellowFrog.gif" onclick="clickSquare(1);" /></td>
-				<td><img id="square2" width="50" height="50" src="images/yellowFrog.gif" onclick="clickSquare(2);" /></td>
-				<td><img id="square3" width="50" height="50" src="images/empty.gif" onclick="clickSquare(3);" /></td>
-				<td><img id="square4" width="50" height="50" src="images/greenFrog.gif" onclick="clickSquare(4);" /></td>
-				<td><img id="square5" width="50" height="50" src="images/greenFrog.gif" onclick="clickSquare(5);" /></td>
-				<td><img id="square6" width="50" height="50" src="images/greenFrog.gif" onclick="clickSquare(6);" /></td>
-			</tr>
-		</table>
-        
-		<script src="script.js"></script>
-	</body>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="section1">
+
+		<span id="timer">
+			<h1>0</h1> second(s)
+		</span>
+
+		<button class="" id="HTPbutton" onclick="showHTP(event)">HOW TO PLAY</button>
+
+		<button id="startbutton" onclick="pauseGame()">PAUSE GAME</button>
+
+		<button id="restartbutton" onclick="restartGame()">RESTART GAME</button>
+
+	</div>
+
+
+	<span>STATUS: <div id="status"> GAME ON! </div></span>
+
+
+	<table border="border">
+
+		<tr>
+			<td><img id="square0" width="50" height="50" src="images/yellowFrog.gif" onclick="clickSquare(0);" draggable="false" /></td>
+
+			<td><img id="square1" width="50" height="50" src="images/yellowFrog.gif" onclick="clickSquare(1);" draggable="false" /></td>
+
+			<td><img id="square2" width="50" height="50" src="images/yellowFrog.gif" onclick="clickSquare(2);" draggable="false" /></td>
+
+			<td><img id="square3" width="50" height="50" src="images/empty.gif" onclick="clickSquare(3);" draggable="false" /></td>
+
+			<td><img id="square4" width="50" height="50" src="images/greenFrog.gif" onclick="clickSquare(4);" draggable="false" /></td>
+
+			<td><img id="square5" width="50" height="50" src="images/greenFrog.gif" onclick="clickSquare(5);" draggable="false" /></td>
+
+			<td><img id="square6" width="50" height="50" src="images/greenFrog.gif" onclick="clickSquare(6);" draggable="false" /></td>
+
+		</tr>
+
+		<tr>
+
+			<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
+			<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
+			<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
+			<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
+			<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
+			<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
+			<td><img class="lilyPad" src="images/images (1).png" width="60" height="60"></td>
+
+		</tr>
+
+	</table>
+
+	<div class="HTP" id="HTP">
+		<h3>Welcome to the FROGGY world</h3>
+
+		<p>Here are the rules</p>
+
+		<ul>
+			<li>A froggy can only jump to the empty lily pad in front of it or jump above a froggy friend to the empty
+				lily pad</li>
+
+			<li>A froggy cannot jump over more than froggy friend</li>
+
+			<li>When you get all the green froggy friends to the left and all the yellow froggy friends to the right
+				then you win</li>
+
+		</ul>
+
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
 </html>

@@ -1,30 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    border: none
+}
+
 body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
 }
 .section1{
-    width: 100vw;
     display: flex;
     justify-content: space-around;
-    margin-bottom: 30px;
 }
+
 #timer h1{
     display: inline;
 }
 
 table{
-    border: 2px solid black;
-    padding: 0;
+    width: 70%;
 }
 
 td{
     border: none;
+    text-align: center;
 }
 
-table img{
+td img{
     border: none;
 }
+
 #status{
     display: inline;
 }
+
+.HTP{
+    background-color: rgba(187, 255, 0, 0.508);
+    width: 70%;
+    height: min-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.show{
+    opacity: 1;
+}
+
+.lilyPad{
+    transform: rotateX(60deg);
+    margin-top: -20px;
+}
+
